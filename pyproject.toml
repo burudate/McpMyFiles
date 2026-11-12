@@ -1,0 +1,19 @@
+[project]
+name = "mcp-myfiles"
+version = "0.1.0"
+description = "MCP server for investigating when/who/why local (especially temporary) files were created on Windows"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=2.2",
+    "psutil>=6.0",
+]
+
+[project.scripts]
+mcp-myfiles = "myfiles_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["myfiles_mcp"]
