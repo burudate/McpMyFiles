@@ -24,7 +24,7 @@ Web 検索（MCP クライアント側で実行）を組み合わせて推測す
 ## セットアップ
 
 ```powershell
-cd C:\Users\festi\Documents\OtherProjects\Claude\mcp-myfiles
+cd C:\Users\xxx\mcp-myfiles
 py -3.14 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e .
 ```
@@ -32,7 +32,7 @@ py -3.14 -m venv .venv
 ### Claude Code に登録
 
 ```powershell
-claude mcp add myfiles --scope user -- C:\Users\festi\Documents\OtherProjects\Claude\mcp-myfiles\.venv\Scripts\python.exe -m myfiles_mcp
+claude mcp add myfiles --scope user -- C:\Users\xxx\mcp-myfiles\.venv\Scripts\python.exe -m myfiles_mcp
 ```
 
 ### Claude Desktop に登録（`claude_desktop_config.json`）
@@ -41,7 +41,7 @@ claude mcp add myfiles --scope user -- C:\Users\festi\Documents\OtherProjects\Cl
 {
   "mcpServers": {
     "myfiles": {
-      "command": "C:\\Users\\festi\\Documents\\OtherProjects\\Claude\\mcp-myfiles\\.venv\\Scripts\\python.exe",
+      "command": "C:\\Users\\xxx\\mcp-myfiles\\.venv\\Scripts\\python.exe",
       "args": ["-m", "myfiles_mcp"]
     }
   }
